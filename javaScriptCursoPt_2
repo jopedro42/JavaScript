@@ -1,0 +1,300 @@
+//FUNCTION
+
+function helloWorld() {
+    console.log("Olá, Mundo!")
+}
+
+helloWorld()//Chamando Função
+
+//FUNCTION - ARGUMENTOS E PARÂMETROS
+
+function sum(n1, n2) {
+    const result = n1 + n2
+    return result
+    //or
+    return n1 + n2
+}
+
+//Arrow Function
+
+const sum = (n1, n2) => n1 + n2
+
+sum(10, 30) //Argumentos
+
+
+const number1 = 10
+const number2 = 20
+
+console.log(`O primeiro número é ${number1}`)
+console.log(`O segundo número é ${number2}`)
+console.log(`E a soma dos dois é ${sum(number1, number2)}`)
+
+//EXERCÍCIOS FUNCTIONS
+
+//1 
+const numbers = (numbers) => {
+    for (i = 1; i < numbers; i++) {
+        console.log(`Contando...${i}`)
+    }
+}
+
+numbers(10)
+
+//2
+const table = (number) => {
+
+    switch (number) {
+        case 1:
+            console.log(`Tabuada do número 1`)
+            console.log(number * 1)
+            console.log(number * 2)
+            console.log(number * 3)
+            console.log(number * 4)
+            console.log(number * 5)
+            console.log(number * 6)
+            console.log(number * 7)
+            console.log(number * 8)
+            console.log(number * 9)
+            console.log(number * 10)
+            break;
+        case 2:
+            console.log(`Tabuada do número 2`)
+            console.log(number * 1)
+            console.log(number * 2)
+            console.log(number * 3)
+            console.log(number * 4)
+            console.log(number * 5)
+            console.log(number * 6)
+            console.log(number * 7)
+            console.log(number * 8)
+            console.log(number * 9)
+            console.log(number * 10)
+            break;
+        case 3:
+            console.log(`Tabuada do número 3`)
+            console.log(number * 1)
+            console.log(number * 2)
+            console.log(number * 3)
+            console.log(number * 4)
+            console.log(number * 5)
+            console.log(number * 6)
+            console.log(number * 7)
+            console.log(number * 8)
+            console.log(number * 9)
+            console.log(number * 10)
+            break;
+        case 4:
+            console.log(`Tabuada do número 4`)
+            console.log(number * 1)
+            console.log(number * 2)
+            console.log(number * 3)
+            console.log(number * 4)
+            console.log(number * 5)
+            console.log(number * 6)
+            console.log(number * 7)
+            console.log(number * 8)
+            console.log(number * 9)
+            console.log(number * 10)
+            break;
+        case 5:
+            console.log(`Tabuada do número 5`)
+            console.log(number * 1)
+            console.log(number * 2)
+            console.log(number * 3)
+            console.log(number * 4)
+            console.log(number * 5)
+            console.log(number * 6)
+            console.log(number * 7)
+            console.log(number * 8)
+            console.log(number * 9)
+            console.log(number * 10)
+            break;
+        case 6:
+            console.log(`Tabuada do número 6`)
+            console.log(number * 1)
+            console.log(number * 2)
+            console.log(number * 3)
+            console.log(number * 4)
+            console.log(number * 5)
+            console.log(number * 6)
+            console.log(number * 7)
+            console.log(number * 8)
+            console.log(number * 9)
+            console.log(number * 10)
+            break;
+        case 7:
+            console.log(`Tabuada do número 7`)
+            console.log(number * 1)
+            console.log(number * 2)
+            console.log(number * 3)
+            console.log(number * 4)
+            console.log(number * 5)
+            console.log(number * 6)
+            console.log(number * 7)
+            console.log(number * 8)
+            console.log(number * 9)
+            console.log(number * 10)
+            break;
+        case 8:
+            console.log(`Tabuada do número 8`)
+            console.log(number * 1)
+            console.log(number * 2)
+            console.log(number * 3)
+            console.log(number * 4)
+            console.log(number * 5)
+            console.log(number * 6)
+            console.log(number * 7)
+            console.log(number * 8)
+            console.log(number * 9)
+            console.log(number * 10)
+            break;
+        case 9:
+            console.log(`Tabuada do número 9`)
+            console.log(number * 1)
+            console.log(number * 2)
+            console.log(number * 3)
+            console.log(number * 4)
+            console.log(number * 5)
+            console.log(number * 6)
+            console.log(number * 7)
+            console.log(number * 8)
+            console.log(number * 9)
+            console.log(number * 10)
+            break;
+        case 10:
+            console.log(`Tabuada do número 10`)
+            console.log(number * 1)
+            console.log(number * 2)
+            console.log(number * 3)
+            console.log(number * 4)
+            console.log(number * 5)
+            console.log(number * 6)
+            console.log(number * 7)
+            console.log(number * 8)
+            console.log(number * 9)
+            console.log(number * 10)
+            break;
+    }
+}
+
+table(5)
+
+//Em vez de fazer o código acima, faça o seguinte: 
+
+const tabuada = (numero) => {
+    if (numero > 10 || numero < 1) {
+        console.log(`SOMENTE NÚMEROS ENTRE 1 E 10`)
+    }
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${numero} x ${i} = ${numero * i}`)
+    }
+}
+
+tabuada(5)
+
+//3
+const horaExata = () => {
+    const dataAtual = new Date()
+    dataAtual.setUTCHours(dataAtual.getUTCHours() - 3);
+    const options = { timeZone: 'America/Sao_Paulo', hour12: false };
+    const horarioBrasil = dataAtual.toLocaleString('pt-BR', options);
+
+    console.log(horarioBrasil)
+}
+
+horaExata()
+
+//ou
+
+const data = new Date()
+const brasil = data.toLocaleDateString("pt-BR")
+
+console.log(brasil + data)
+
+// let irParaTrabalho = "Sim"
+// let sentindoMal = false
+
+// if (irParaTrabalho === "Sim" && sentindoMal === false) {
+//     console.log("Irei para o trabalho hoje!")
+// }
+// else if (irParaTrabalho === "Não" || sentindoMal === true) {
+//     console.log("Não irei para o trabalho hoje!")
+// }
+
+//5
+const qualOMaior = (n1, n2) => {
+    if (n1 > n2) {
+        console.log(`O número ${n1} é o maior número!`)
+    }
+    else if (n1 = n2) {
+        console.log(`Os números são iguais ${n1}`)
+    }
+    else {
+        console.log(`O número ${n2} é o maior número!`)
+    }
+}
+
+qualOMaior(25, 25)
+
+//6
+const people = [{
+    numberOfChildren: 3,
+    salary: 1450.0,
+},
+{
+    numberOfChildren: 1,
+    salary: 5050.0,
+},
+{
+    numberOfChildren: 2,
+    salary: 1450.0,
+},
+{
+    numberOfChildren: 4,
+    salary: 2350.0,
+},
+{
+    numberOfChildren: 6,
+    salary: -1450.0,
+},
+{
+    numberOfChildren: 1,
+    salary: 1450.0,
+}
+]
+
+function findAvarageHighestSalary(peopleInformation) {
+    let avaregeSalary = 0
+    let avarageChildren = 0
+    let highestSalary = 0
+
+    for (let i = 0; i < peopleInformation.length; i++) {
+        const salary = peopleInformation[i].salary
+        const children = peopleInformation[i].numberOfChildren
+
+        if (salary > highestSalary) highestSalary = salary
+
+        if (salary < 0) {
+            console.log(`Média de salário é de R$ ${(avaregeSalary / i.toFixed(0))}`)
+            console.log(`Média de filho é de ${(avarageChildren / i.toFixed(0))}`)
+            console.log(`O maior salário é R$ ${highestSalary}`)
+            break
+        } else {
+            avaregeSalary = avaregeSalary + salary;
+            avarageChildren += children
+        }
+
+    }
+}
+
+findAvarageHighestSalary(people)
+
+//7
+const jurosDoInvestimento = (valorInicial, valorAtual, tempo) => {
+    const juros = (valorAtual - valorInicial) / (valorInicial * tempo)
+
+    console.log((juros * 100).toFixed(2) + '%')
+
+}
+
+jurosDoInvestimento(1000, 1200, 10)
